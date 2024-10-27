@@ -6,13 +6,13 @@ app = Flask(__name__)
 
 CORS(app)
 
-JIKAN_API_URL = 'https://api.jikan.moe/v4/seasons/now'
+JIKAN_API_URL = 'https://api.jikan.moe/v4/'
 
 def fetch_all_airing_anime():
     all_anime = []
     page = 1
     while True:
-        response = requests.get(f'{JIKAN_API_URL}?page={page}')
+        response = requests.get(f'{JIKAN_API_URL}seasons/now?page={page}')
         if response.status_code == 200:
             data = response.json().get('data', [])
             if not data:
