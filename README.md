@@ -1,2 +1,8 @@
 # anitracker_backend
-python backend for anitracker
+
+Backend for anitracker project.
+Jikan api works without any api keys.
+
+```bash
+python backend.py
+```
