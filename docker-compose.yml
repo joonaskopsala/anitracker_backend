@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"  # Expose MongoDB port
+    volumes:
+      - mongodb_data:/data/db  # Persist data
+
+volumes:
+  mongodb_data:
